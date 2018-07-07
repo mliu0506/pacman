@@ -1,3 +1,14 @@
-button {
+buttons {
     border-radius: 10px;
+    margin:10px;
+    float: right;
+    
+}
+body {
+    background-image:url("pacman.jpg");
+}
+.detail{
+    color:orange;
+    margin-top:165px;
+
 }

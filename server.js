@@ -16,7 +16,7 @@ var connection;
 
 app.listen(port, ()=> {
 //    connection = db();
-    connection.connect();
+//    connection.connect();
     console.log(`connection on port: ${port}`) 
 
 });

@@ -1,8 +1,8 @@
 var mysql =  require("mysql");
 
 
-
-    var con = mysql.createConnection({
+function login()
+{    var connection  = mysql.createConnection({
         host: "localhost",
         port:3306,
         user:"root",
@@ -11,12 +11,11 @@ var mysql =  require("mysql");
         multipleStatements: true
 
     });
+return connection;
+   
+    }
 
-    con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        
-          
-      });
-
-      module.exports = con;
+  
+      module.exports = {
+login:login
+      }

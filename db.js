@@ -1,20 +1,22 @@
 var mysql =  require("mysql");
 
-function login(){
+
 
     var connection = mysql.createConnection({
         host: "localhost",
-        port:3000,
+        port:3306,
         user:"root",
         password: "root",
-        database: "hat_pro",
+        database: "pacman",
         multipleStatements: true
 
     });
 
-   
-};
+    con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+        
+          
+      });
 
-module.exports = {
-    login:login();
-};
+      module.exports = login;

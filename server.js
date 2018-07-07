@@ -15,7 +15,7 @@ var port = 3000;
 var connection;
 
 app.listen(port, ()=> {
-    connection = db();
+//    connection = db();
     connection.connect();
     console.log(`connection on port: ${port}`) 
 

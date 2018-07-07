@@ -4,16 +4,22 @@ var db = require('./db');
 
 var cors = require('cors');
 var path = require('path');
-//var express = require('express');
-//var app = express();
-var app = require('express')();
+var express = require('express');
+var app = express();
 
 var bodyParser = require('body-parser');
 
 
 
-var port = 3306;
+var port = 3000;
 var connection;
+
+app.listen(port, ()=> {
+    connection = db();
+    connection.connect();
+    console.log(`connection on port: ${port}`) 
+
+});
 
 app.use(cors());
 app.use(bodyParser.json()); // support json encoded bodies
